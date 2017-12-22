@@ -1,0 +1,12 @@
+[alias]
+  aa = add --all
+  ac = add . -A git commit
+  co = checkout
+  cm = commit
+  p = push
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  gssh = git@github.com:hide-yo/
+  ghttp = https://github.com/hide-yo/
