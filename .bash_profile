@@ -10,6 +10,10 @@ export PATH="/Users/yoshidahidetaka/anaconda/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# LAMMPS
+export PATH="/Users/yoshidahidetaka/workspace/Lammps/lammps-11Aug17/src:$PATH"
+
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+

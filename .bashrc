@@ -41,9 +41,11 @@ alias 755='chmod 755'
 alias 777='chmod 777'
 alias vi='nvim'
 alias grep='grep --color'
+alias g='grep -rnw'
 alias df='df -h'
 alias q='exit'
 alias sekirei='ssh -l k015006 sekirei.issp.u-tokyo.ac.jp'
+alias scpsekirei='scp k015006@sekirei.issp.u-tokyo.ac.jp'
 alias py='python'
 
 #tex live manager update

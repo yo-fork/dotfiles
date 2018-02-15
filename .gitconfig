@@ -10,3 +10,6 @@
   remotes = remote -v
   gssh = git@github.com:hide-yo/
   ghttp = https://github.com/hide-yo/
+	s = status
+	m = merge
+	f = fetch

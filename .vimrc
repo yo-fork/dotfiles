@@ -67,6 +67,8 @@ set smartcase
 set wrapscan
 "置換の時gオプションをデフォルトで有効にする
 set gdefault
+"一括置換機能を有効にする
+set inccommand=split
 
 
 "不可視文字の設定
