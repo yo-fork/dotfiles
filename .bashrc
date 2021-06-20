@@ -2,6 +2,10 @@
 #プロンプトの設定
 PS1='\[\033[4;36m\]\u@\h:\w \[\033[0m\]\n\\$ '
 
+export PYTHONPATH=$HOME/workspace/kenkyu/vasptools:$PYTHONPATH
+export PATH=$HOME/workspace/kenkyu/vasptools/scripts:$PATH
+
+
 
 #とりあえず
 alias vi.='vi .bashrc'
@@ -45,8 +49,9 @@ alias g='grep -rnw'
 alias df='df -h'
 alias q='exit'
 alias sekirei='ssh -l k015006 sekirei.issp.u-tokyo.ac.jp'
-alias scpsekirei='scp k015006@sekirei.issp.u-tokyo.ac.jp'
-alias py='python'
+alias enaga='ssh -l k015006 enaga.issp.u-tokyo.ac.jp'
+alias py='python3'
+alias python='python3'
 
 #tex live manager update
 alias texupdate='sudo tlmgr update --self --all'
@@ -62,3 +67,23 @@ else
     alias ls='ls --color=auto'
 fi
 
+#コマンド出力結果のシングル又はダブルクォーテーションの中身をstrに代入して指定された文字列を繋げる
+function get_str () {
+    str=`echo $($1) | awk -F'['\''"]' '{print $2}'`
+    str="${str}$2"
+    echo str=$str
+}
+
+#scp sekirei:{remote} {local} {option}
+function scpsekirei () {
+    st1="scp k015006@sekirei.issp.u-tokyo.ac.jp" 
+    st2="${st1}:$1 $2 $3"
+    eval $st2
+}
+
+#scp enaga:{remote} {local} {option}
+function scpenaga () {
+    st1="scp k015006@enaga.issp.u-tokyo.ac.jp" 
+    st2="${st1}:$1 $2 $3"
+    eval $st2
+}
